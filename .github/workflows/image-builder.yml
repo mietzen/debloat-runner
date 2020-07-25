@@ -14,17 +14,15 @@ jobs:
     - name: Checkout config
       uses: actions/checkout@v2
 
-    - name: Host info
+    - name: Disk space
       run: |
-        echo "Disk space:"
         df -h /
 
     - name: Free disk space
       run: |
-        chmod +x ./free-space.sh
-        ./free-space.sh
+        chmod +x ./free-up-space.sh
+        ./free-up-space.sh
 
-    - name: Host info
+    - name: Disk space
       run: |
-        echo "Disk space:"
         df -h /
