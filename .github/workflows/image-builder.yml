@@ -18,18 +18,18 @@ jobs:
       run: |
         echo "Disk space:"
         df -h /
-        sudo du -h -d 2 /usr
-        sudo du -h -d 2 /mnt
+        sudo ls -alh /usr/local/lib
+        sudo ls -alh /mnt
 
     - name: Free disk space
       run: |
         chmod +x ./free-space.sh
         ./free-space.sh
+        sudo rm -rf /usr/share/dotnet
 
     - name: Host info
       run: |
         echo "Disk space:"
         df -h /
-        sudo du -h -d 2 /usr
-        sudo du -h -d 2 /mnt
+        sudo du -h -d 1 /usr
 
