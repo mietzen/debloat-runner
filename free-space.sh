@@ -45,5 +45,6 @@ sudo apt-get autoremove -y
 sudo apt-get autoclean -y
 sudo rm -rf /usr/local/lib/android
 sudo rm -rf /usr/share/dotnet
+sudo rm -rf /opt/az /opt/cabal /opt/cni /opt/ghc /opt/google /opt/hhvm /opt/hostedtoolcache/* /opt/microsoft /opt/mssql-tools
 docker rmi $(docker image ls -aq)
 exit 0
