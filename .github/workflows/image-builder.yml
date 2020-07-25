@@ -18,6 +18,8 @@ jobs:
       run: |
         echo "Disk space:"
         df -h /
+        ls -alh /opt
+        ls -alh /
 
     - name: Free disk space
       run: |
@@ -28,6 +30,5 @@ jobs:
       run: |
         echo "Disk space:"
         df -h /
-        sudo du -h -d 1 /usr
-        sudo du -h -d 1 /
+        sudo du -ha -d 1 --exclude=/{proc,sys,dev} /
 
