@@ -1,4 +1,4 @@
-## This script frees up gitlab runner diskspace, leaving you with an delboated runner (with docker).
+## This script frees up GitHub runner diskspace, leaving you with an delboated runner (with docker).
 
 Initial: 
 ```
