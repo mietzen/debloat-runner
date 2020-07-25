@@ -18,8 +18,7 @@ jobs:
       run: |
         echo "Disk space:"
         df -h /
-        ls -alh /opt
-        ls -alh /
+        sudo du -ha -d 2 /opt
 
     - name: Free disk space
       run: |
