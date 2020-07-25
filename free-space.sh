@@ -1,6 +1,7 @@
 #!/bin/bash
 sudo swapoff -a
 sudo rm -f /swapfile
+sudo rm -f /mnt/swapfile
 sudo dd if=/dev/zero of=/swapfile bs=1M count=512
 sudo mkswap /swapfile
 sudo swapon -a
@@ -43,5 +44,6 @@ sudo apt-get remove aria2 ansible azure-cli shellcheck rpm xorriso zsync \
 sudo apt-get autoremove -y
 sudo apt-get autoclean -y
 sudo rm -rf /usr/local/lib/android
+sudo rm -rf /usr/share/dotnet
 docker rmi $(docker image ls -aq)
 exit 0
